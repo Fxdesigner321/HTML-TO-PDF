@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCT</title>
+    <style>
+        table{
+            width: 100%;
+            border-collapse: collapse;
+        }
+        b{font-family: sans-serif;}
+    </style>
+</head>
+<body>
+    <table>
+        <thead>
+            <tr>
+              <th style="border: 2px  solid gray; border-style: dotted;"><b>Client</b></th>
+              <th style="border: 2px  solid gray; border-style: dotted;"><b>Shipper</b></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="border: 2px  solid gray; border-style: dotted;">{order_client}</td>
+              <td style="border: 2px  solid gray; border-style: dotted;">{order_shipper}</td>
+            </tr>
+            <tr>
+              <td style="border: 2px  solid gray; border-style: dotted;">{order_address}</td>
+              <td style="border: 2px  solid gray; border-style: dotted;">{order_depart_from}</td>
+            </tr>
+          </tbody>
+    </table>
+    <center>
+    <h1 style="font-family: sans-serif; margin-top: 2%;"><b> Order No: {oder_number} </b></h1>
+  </center>
+  <table>
+    <h4 style="float: right;"><b>Date</b>{order_date}</h4>
+    <thead>
+        <tr>
+          <th style="border: 2px  solid black; padding: 14px;"><b>#</b></th>
+          <th style="border: 2px  solid black; padding: 14px;"><b>Code</b></th>
+          <th style="border: 2px  solid black; padding: 14px;"><b>Name</b></th>
+          <th style="border: 2px  solid black; padding: 14px;"><b>Unit</b></th>
+          <th style="border: 2px  solid black; padding: 14px;"><b>Price</b></th>
+          <th style="border: 2px  solid black; padding: 14px;"><b>Qty</b></th>
+          <th style="border: 2px  solid black; padding: 14px;"><b>Actual</b></th>
+          <th style="border: 2px  solid black; padding: 14px;"><b>Rejected</b></th>
+          <th style="border: 2px  solid black; padding: 14px;"><b>Reason for Rejection</b></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="border: 1px  solid black; padding: 0px;">{good_number}</td>
+          <td style="border: 1px  solid black; padding: 0px;">{good_code}</td>
+          <td style="border: 1px  solid black; padding: 0px;">{good_name} <br> {good_note}</td>
+          <td style="border: 1px  solid black; padding: 0px;">{good_unit}</td>
+          <td style="border: 1px  solid black; padding: 0px;">{good_price}</td>
+          <td style="border: 1px  solid black; padding: 0px;">{good_amount}</td>
+          <td style="border: 1px  solid black; padding: 0px;">{good_actual}</td>
+          <td style="border: 1px  solid black; padding: 0px;">{good_rejected}</td>
+          <td style="border: 1px  solid black; padding: 0px;">{good_reason}</td>
+        </tr>
+      </tbody>
+</table>
+<br>
+<br>
+<table>
+    <tbody>
+      <tr>
+        <td style="border: 2px  solid gray; border-style: dotted;"><b>Weight:</b>{order_weight}</td>
+        <td style="border: 2px  solid gray; border-style: dotted;"></td>
+      </tr>
+      <tr>
+        <td style="border: 2px  solid gray; border-style: dotted;"><b>Status:</b>{order_status}</td>
+        <td style="border: 2px  solid gray; border-style: dotted;"><b>Latitude:</b>{order_lat}</td>
+      </tr>
+      <tr>
+        <td style="border: 2px  solid gray; border-style: dotted;"><b>Reason for Rejection:</b>{order_reason}</td>
+        <td style="border: 2px  solid gray; border-style: dotted;"><b>Longitude:</b>{order_lon}</td>
+      </tr>
+      <tr>
+        <td style="border: 2px  solid gray; border-style: dotted;"><b>Time:</b>{order_delivery_datetime}</td>
+        <td style="border: 2px  solid gray; border-style: dotted;"><b>Map Location:</b></td>
+      </tr>
+      <tr>
+        <td style="border: 2px  solid gray; border-style: dotted;"><br></td>
+        <td style="border: 2px  solid gray; border-style: dotted; border-top: none; border-bottom: none;"><br></td>
+      </tr>
+      <tr>
+        <td style="border: 2px  solid gray; border-style: dotted;"><b>Driver:</b>{order_driver}</td>
+        <td style="border: 2px  solid gray; border-style: dotted; border-top: none; border-bottom: none;">{map_location_image}</td>
+      </tr>
+      <tr>
+        <td style="border: 2px  solid gray; border-style: dotted;"><b>Vehicle:</b>{order_vehicle}</td>
+        <td style="border: 2px  solid gray; border-style: dotted; border-top: none; border-bottom: none;"><br></td>
+      </tr>
+      <tr>
+        <td style="border: 2px  solid gray; border-style: dotted;"><br></td>
+        <td style="border: 2px  solid gray; border-style: dotted; border-top: none;"><br></td>
+      </tr>
+    </tbody>
+</table>
+<br>
+<table>
+    <tbody>
+      <tr>
+        <td style="border: 2px  solid gray; border-style: dotted;">Name:{order_signaturename}</td>
+        <td style="border: 2px  solid gray; border-style: dotted;"></td>
+      </tr>
+      <tr>
+        <td style="border: 2px  solid gray; border-style: dotted;"><b>Signrature/Photo:</b></td>
+        <td style="border: 2px  solid gray; border-style: dotted;"><b>Image evidencing Rejection:</b></td>
+      </tr>
+      <tr>
+        <td style="border: 2px  solid gray; border-style: dotted;">{order_signature}</td>
+        <td style="border: 2px  solid gray; border-style: dotted;">{order_reason_photo}</td>
+      </tr>
+    </tbody>
+</table>
+<center>
+  <h4><b> Thank you for your choice! </b></h4>
+</center>
+</body>
+</html>
